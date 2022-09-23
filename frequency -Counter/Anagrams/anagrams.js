@@ -26,4 +26,29 @@ function anagram(str1, str2) {
 
   return true;
 }
-anagram("oreoluwa", "oreoluwa");
+anagram("oreoluwa", "oreoluwa
+
+
+
+function anagram(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    return false
+  }
+  let str = {}
+  for (let i = 0; i < arr1.length; i++) {
+    val = arr1[i]
+    str[val] ? str[val] += 1 : str[val] = 1
+  }
+  for (let i = 0; i < arr2.length; i++) {
+    let val = arr2[i]
+    if (!str[val]) {
+      return false
+    } else {
+      str[val] -= 1
+    }
+  }
+  return  true
+
+}
+
+anagram("OREOLUWA", "OREOLUWA")
